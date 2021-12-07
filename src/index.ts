@@ -7,9 +7,5 @@ import { getLonelyFiles } from ".\\getLonelyFiles";
     ["..\\..\\211129 WMS Workspace\\fund-web\\src\\index.tsx"]
   );
 
-  const lonelyScripts = lonelyFiles.filter(
-    (t) => t.endsWith(".ts") || t.endsWith(".tsx")
-  );
-
-  await writeFile("output.txt", [...lonelyScripts].join("\r\n"));
+  await writeFile("output.txt", [...lonelyFiles].join("\r\n"));
 })();
